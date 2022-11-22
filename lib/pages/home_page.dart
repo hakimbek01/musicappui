@@ -15,11 +15,11 @@ class _TestState extends State<Test> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade300,
+      backgroundColor: Colors.grey.shade200,
       appBar: AppBar(
         title: Text("Quick Help",style: TextStyle(fontSize: 20,color: Colors.black),),
         elevation: 0,
-        backgroundColor: Colors.grey.shade300,
+        backgroundColor: Colors.grey.shade200,
         actions: [
           IconButton(
             onPressed: (){},
@@ -216,12 +216,17 @@ class _TestState extends State<Test> {
                         ),//LYRIC & REP
                         SizedBox(height: 10,),
                         Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Container(
                                   margin: EdgeInsets.only(top: 15),
                                   padding: EdgeInsets.only(left: 27),
                                   child: Text('New Music',style: TextStyle(fontSize: 20,),)
+                              ),
+                              Container(
+                                  margin: EdgeInsets.only(top: 15),
+                                  padding: EdgeInsets.only(right: 27),
+                                  child: Text('View all',style: TextStyle(color: Colors.grey),)
                               ),
                             ]
                         ),
@@ -324,7 +329,6 @@ class _TestState extends State<Test> {
           ),
         ],
       ),
-
       bottomNavigationBar: BottomNavigationBar(
         showUnselectedLabels: true,
         selectedItemColor: Colors.blue,
